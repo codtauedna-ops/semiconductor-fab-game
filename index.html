@@ -49,7 +49,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"></noscript>
-<link rel="modulepreload" href="./g/zh-Hant/main-QUKU62T2.js?v=20261103f">
+<link rel="modulepreload" href="./g/zh-Hant/main-QUKU62T2.js?v=20261103g">
 <link rel="modulepreload" href="./g/zh-Hant/c-NDQZPZMJ.js">
 <link rel="modulepreload" href="./g/zh-Hant/c-LEFOBPMS.js">
 <link rel="modulepreload" href="./g/zh-Hant/c-QBAOZAHQ.js">
@@ -1756,7 +1756,7 @@ html[data-ptr] :focus-visible{outline:none}
 <div class="home" id="home">
   <main class="board" id="board">
     <div class="scroll">
-      <span class="led" id="hLed"><i class="lamp r"></i>LOT-3246117007 (24电科闽台1班)　ETCH-03 DOWN 02:47　ON-CALL ▸ 顾问：赵泓博nb666</span>
+      <span class="led" id="hLed" onclick="window.showEasterEggModal()" style="cursor:pointer;" title="點擊查看專案檔案與彩蛋"><i class="lamp r"></i>LOT-3246117007 (24电科闽台1班)　ETCH-03 DOWN 02:47　ON-CALL ▸ 顾问：赵泓博nb666</span>
       <div class="htabs" id="hTabs" role="tablist" aria-label="主頁的分頁"><button class="htab" id="htPlay" type="button" role="tab" aria-selected="true" aria-controls="hMain" data-t="play">遊戲</button><button class="htab" id="htLearn" type="button" role="tab" aria-selected="false" aria-controls="hMain" data-t="learn" tabindex="-1">學習</button><button class="htab" id="htDev" type="button" role="tab" aria-selected="false" aria-controls="hMain" data-t="dev" tabindex="-1">開源</button></div>
       <div class="hmain" id="hMain">
         <div class="b-head"><h1 class="b-title">fab<em>24</em>hr</h1><div class="langsw" id="hLang" role="group" aria-label="語言" hidden></div>
@@ -1809,13 +1809,38 @@ html[data-ptr] :focus-visible{outline:none}
   </main>
 </div>
 
-<script src="./g/zh-convert.js?v=20261103f"></script>
+<script src="./g/zh-convert.js?v=20261103g"></script>
 <script src="./three.min.js"></script>
-<script type="module" src="./g/zh-Hant/main-QUKU62T2.js?v=20261103f"></script>
+<script type="module" src="./g/zh-Hant/main-QUKU62T2.js?v=20261103g"></script>
 
 
 
 
 
+<!-- 赵泓博nb666 & 唐敬尧导师 产研专案彩蛋弹窗 -->
+<div id="easterEggModal" class="modal-backdrop" style="display:none; position:fixed; z-index:99999; left:0; top:0; width:100%; height:100%; background:rgba(10,16,20,0.85); backdrop-filter:blur(6px); align-items:center; justify-content:center;">
+  <div class="modal-box" style="background:#131c21; border:1px solid #7fe3c8; box-shadow:0 0 30px rgba(127,227,200,0.25); border-radius:8px; width:90%; max-width:620px; padding:24px; color:#e6eff2; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,monospace;">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #23353d; padding-bottom:12px; margin-bottom:16px;">
+      <h3 style="margin:0; font-size:18px; color:#7fe3c8; display:flex; align-items:center; gap:8px;">
+        <span style="display:inline-block; width:10px; height:10px; background:#e2574c; border-radius:50%;"></span>
+        重点产研专案认证档案
+      </h3>
+      <button onclick="window.closeEasterEggModal()" style="background:none; border:none; color:#8b9ea7; font-size:22px; cursor:pointer; line-height:1;">&times;</button>
+    </div>
+    <div style="font-size:13px; line-height:1.7; color:#b0c4cc;">
+      <p style="margin:0 0 8px 0; color:#fff; font-weight:bold;">【专案名称】24电科（闽台）1班 3246117007 重点产研专案</p>
+      <p style="margin:0 0 8px 0;">【研发代号】助听器超低功耗数字信号处理器芯片「萤火」</p>
+      <p style="margin:0 0 8px 0;">【高校产研导师】<b>唐敬尧 老师</b>（微电子学导师・24电科专案学术带头人）</p>
+      <p style="margin:0 0 8px 0;">【特邀架构顾问】<b>赵泓博nb666</b>（传奇架构师・全栈工艺顾问）</p>
+      <div style="background:#0c1417; border-left:3px solid #f0a800; padding:10px 14px; margin:12px 0; font-size:12px;">
+        <i>“从研发线12片分片，到量产厂半夜02:47抢修，再到封测厂PAT离群点测试。半导体从不相信侥幸，唯有敬畏工程与物理规律，才能让世界听见爱的声音。”</i>
+      </div>
+      <p style="margin:0; font-size:11px; color:#708892; text-align:right;">芯片全生命周期设计验证通过 · fab24hr 特聘工艺专案认证</p>
+    </div>
+    <div style="margin-top:20px; text-align:right;">
+      <button onclick="window.closeEasterEggModal()" style="background:#7fe3c8; color:#0f1a1f; border:none; border-radius:4px; padding:8px 20px; font-weight:bold; cursor:pointer;">确认并返回生产线</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
